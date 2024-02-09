@@ -36,8 +36,8 @@
     <script>
     
       /* DEFINITIONS */
-      var btn = document.getElementById("btn");
-      var frame = document.getElementById("mainframe");
+      const btn = document.getElementById("btn");
+      const frame = document.getElementById("mainframe");
       frame = frame ? frame.contentWindow : null;
 
       class Message {
@@ -57,11 +57,11 @@
       * RECEIVE MESSAGE FROM CHILD
       */
       window.addEventListener("message", (e) => {
-        var data = e.data;
+        const data = e.data;
         console.log("RECEIVED message from CHILD TO PARENT", data);
         
-        var type = data.type;
-        var body = data.body;
+        const type = data.type;
+        const body = data.body;
 
         if(type === "shakehand" && body) {
           console.log("SHAKEHAND RECEIVED FROM CHILD, SENDING dummyDataToSend TO CHILD...")
@@ -78,7 +78,7 @@
       * SEND MESSAGE TO CHILD
       */
       
-      var dummyDataToSend=[{name:"Monitor",price:"400",currency:"USD",description:"The best monitor made in USA."},{name:"CPU",price:"70",currency:"EUR",description:"The fastest CPU."},{name:"GPU",price:"500",currency:"USD",description:"WOW, so fast GPU for gaming"},{name:"Keyboard",price:"50",currency:"EUR",description:"Ergonomic keyboard for geeks"}];
+      const dummyDataToSend=[{name:"Monitor",price:"400",currency:"USD",description:"The best monitor made in USA."},{name:"CPU",price:"70",currency:"EUR",description:"The fastest CPU."},{name:"GPU",price:"500",currency:"USD",description:"WOW, so fast GPU for gaming"},{name:"Keyboard",price:"50",currency:"EUR",description:"Ergonomic keyboard for geeks"}];
       
       btn.addEventListener("click", () => {
         sendMessage(frame, new Message("data", dummyDataToSend));

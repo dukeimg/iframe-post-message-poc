@@ -15,14 +15,14 @@
     <script>
     
       /* DEFINITIONS */
-      var parentWindow = window.parent;
+      const parentWindow = window.parent;
       
       /*
       * RECEIVE MESSAGE FROM PARENT
       */
 
       window.addEventListener("message", (e) => {
-        var data = e.data;
+        const data = e.data;
         console.log("RECEIVED message from PARENT TO CHILD", data);
 
         document.getElementById("placeholder").innerText = data;

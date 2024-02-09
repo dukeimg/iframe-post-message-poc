@@ -19,14 +19,14 @@
     <script>
     
       /* DEFINITIONS */
-      var frame = document.getElementById("mainframe");
+      const frame = document.getElementById("mainframe");
       frame = frame ? frame.contentWindow : null;
         
       /*
       * RECEIVE MESSAGE FROM CHILD
       */
       window.addEventListener("message", (e) => {
-        var data = e.data;
+        const data = e.data;
 
         if(data === "shakehand") {
           console.log("SHAKEHAND RECEIVED FROM CHILD")
