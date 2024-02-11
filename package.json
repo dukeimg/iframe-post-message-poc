@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "dev-child": "bun run --hot src/child.ts"
+  },
+  "dependencies": {
+    "hono": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

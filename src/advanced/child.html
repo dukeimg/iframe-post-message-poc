@@ -16,8 +16,8 @@
     <script>
     
       /* DEFINITIONS */
-      const parentWindow = window.parent;
-      const btn = document.getElementById("btn");
+      let parentWindow = window.parent;
+      let btn = document.getElementById("btn");
 
       class Message {
         constructor(type, body) {
@@ -37,11 +37,11 @@
       */
 
       window.addEventListener("message", (e) => {
-        const data = e.data;
+        let data = e.data;
         console.log("RECEIVED message from PARENT TO CHILD", data);
         
-        const type = data.type;
-        const body = data.body;
+        let type = data.type;
+        let body = data.body;
 
         if(type === 'data') {
           console.log()
