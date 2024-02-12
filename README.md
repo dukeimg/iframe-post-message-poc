@@ -3,21 +3,21 @@
 This repo showcases iframe communication using postMessage api.
 
 It features two examples:
-- simple handshake example (src/parent)
-- advanced message passing example (src/advanced/parent)
+- simple handshake example 
+- advanced message passing example 
 
 Ts config will be used if more intricate examples are needed.
 
 ## start
 
-To set up server:
+To run simple:
 ```sh
-install live server vscode extension
+open src/parent.html in browser
 ```
 
 To run:
 ```sh
-open parent with live server using command pallate or right click
+open src/advanced/parent.html in browser
 ```
 
 ### postMessage for frameworks
