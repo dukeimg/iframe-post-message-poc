@@ -33,7 +33,13 @@
       window.addEventListener("load", () => {
         parentWindow.postMessage("shakehand", "*");
       });
+
+      const openNewTab = () => {
+        window.open('http://' + location.host + '/iframe-post-message-poc/src/parent.html', "_blank");
+      };
       
     </script>
+
+    <button onclick="openNewTab()">open new tab</button>
   </body>
 </html>

@@ -33,6 +33,12 @@
           frame.postMessage("THIS TEXT IS BEING SENT TO CHILD", "*");
         }
       });
+
+      if (window.opener) {
+        const element = document.createElement("div");
+        element.innerText = `window.opener is ${window.opener.location.href}`;
+        document.body.append(element);
+      }
       
     </script>
   </body>
