@@ -27,6 +27,7 @@
 
         document.getElementById("placeholder").innerText = data;
 
+        e.source.postMessage(`data from child iframe`);
       });
       
       /* SHAKE HAND WITH PARENT */
